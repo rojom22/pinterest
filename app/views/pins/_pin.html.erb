@@ -1,6 +1,6 @@
 <div id="<%= dom_id pin %>">
 
- <%= link_to image_tag(pin.image, style: "width:150px; height:150px"), pin.image %>
+ <%= link_to image_tag(pin.image, style: "width:150px; height:150px"), pin %>
   <p><strong>
   <%#= link_to pin.user.username, user_path(pin.user.username) %>
   <%= link_to pin.user.username,  pin.user.username%>
@@ -11,7 +11,7 @@
   </p>
 
   <% if action_name != "show" %>
-  <%= link_to "Show this pin", pin, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  
   <% if pin.user == current_user %>
     
     <%= link_to 'Edit this pin', edit_pin_path(pin), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
